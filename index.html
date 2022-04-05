@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网易云非vip歌曲免费下载</title>
+    <style type="text/css" media="screen">
+        <link rel="Shortcut Icon" href="https://y.music.163.com/favicon.ico" type="image/x-icon" / >
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+    li {
+        list-style: none;
+        padding: 3px;
+    }
+    #searchMsg{
+    	    width: 540px;
+    height: 34px;
+        vertical-align: top;
+        font-size: 14px;
+        padding-left: 3px;
+    }
+    li:hover {
+        background-color: rgb(168, 213, 252);
+        cursor: default;
+    }
+    ul li:first-child{
+	  margin-top: 0;
+    }
+    ul{
+    	border: 1px solid #b6b6b6;
+    	border-top: 0px;
+        display: none;
+    }
+    #btn{
+    	color: #fff;
+    line-height: 38px;
+    padding: 0 8px;
+    font-size:14px;
+    display: inline-block;
+    height: 38px;
+    background: #3385ff;
+        cursor: pointer;
+    }
+    .searchbar{
+    	    font-size: 0;
+    }
+    .search{
+    	position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -308px;
+    margin-top: -124px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <div class="searchbar">
+            <input type="text" id="searchMsg">
+            <span id="btn">下载！！</span>
+        </div>
+        <ul id="list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+    var searchMsg = document.getElementById("searchMsg");
+    var list = document.getElementById("list");
+    var btn = document.getElementById("btn");
+   
+
+
+
+    //点击百度一下按钮跳转到相应的页面
+    btn.onclick = function() {
+        location.href = "http://music.163.com/song/media/outer/url?id=" + searchMsg.value + ".mp3"
+    }
+
+    function hide(obj) {
+        obj.style.display = "none"
+    }
+
+    function show(obj) {
+        obj.style.display = "block"
+    }
+    </script>
+</body>
+
+</html>
